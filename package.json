@@ -4,7 +4,7 @@
   "description": "Multiplayer-Web-Game based on Buckshot Roulette",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles --forceExit",
     "start": "node index.js"
   },
   "keywords": [],
