@@ -1,4 +1,7 @@
 # Buckshot-MP
+
+[![Node.js CI](https://github.com/JustALostSoul/Buckshot-MP/actions/workflows/node.js.yml/badge.svg)](https://github.com/JustALostSoul/Buckshot-MP/actions/workflows/node.js.yml)
+
 Multiplayer-Web-Game based on Buckshot Roulette
 
 It is planned, that you can play with up to 4 players in an online room. The rules are based on the Tabletop-Simulator Game created based on Buckshot Roulette. Once finished, you should be able to choose a server from a list, connect to the room and quickly start playing against other people.
