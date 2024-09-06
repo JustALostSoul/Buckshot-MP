@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
+jobs:blank
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
@@ -24,6 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+
+      - name: Initialize Jest
+        run: npm install --save-dev jest
 
       # Runs a single command using the runners shell
       - name: Run complete Test
