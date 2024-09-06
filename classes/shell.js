@@ -3,3 +3,5 @@ class Shell{
         this.live = live;
     }
 }
+
+module.exports = Shell;
