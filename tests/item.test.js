@@ -2,6 +2,8 @@ const Gun = require("../classes/gun");
 const HandSaw = require("../classes/items/handSaw");
 const Player = require("../classes/player");
 const Beer = require("../classes/items/beer");
+const CigarettePack = require("../classes/items/cigarette");
+const ExpiredMedicine = require("../classes/items/medicine");
 
 test('Tests if the Hand Saw causes double damage', () => {
     let testGun = new Gun(1,1,true);
@@ -9,11 +11,8 @@ test('Tests if the Hand Saw causes double damage', () => {
     let testHandSaw = new HandSaw();
 
     testHandSaw.use(testGun);
-
     expect(testGun.damage).toBe(2);
-
     testGun.shoot(testPlayer);
-
     expect(testPlayer.health).toBe(2);
 });
 
@@ -22,8 +21,46 @@ test('Tests if the Beer unloads one Shell from Gun', () => {
     let testBeer = new Beer();
 
     expect(testGun.currentMagazine.Shells.length).toBe(2);
-
     testBeer.use(testGun);
-
     expect(testGun.currentMagazine.Shells.length).toBe(1);
+});
+
+test('Tests if the Cigarette Pack heals properly', () => {
+    let testPlayer = new Player();
+    let testCig = new CigarettePack();
+
+    expect(testPlayer.health).toBe(4);
+    testCig.use(testPlayer);
+    expect(testPlayer.health).toBe(5);
+});
+
+test('Tests, if Medicine adds/subtracts health properly on random value', () => {
+    let testPlayer = new Player();
+    let testMeds = new ExpiredMedicine();
+
+    expect(testPlayer.health).toBe(4);
+    testMeds.use(testPlayer);
+    if(testMeds.lastRoll < 0.5){
+        expect(testPlayer.health).toBe(6);
+    }else{
+        expect(testPlayer.health).toBe(3);
+    }
+});
+
+test('Tests, if Medicine adds health on fixed good one', () => {
+    let testPlayer = new Player();
+    let testMeds = new ExpiredMedicine(true, true);
+
+    expect(testPlayer.health).toBe(4);
+    testMeds.use(testPlayer);
+    expect(testPlayer.health).toBe(6);
+});
+
+test('Tests, if Medicine adds health on fixed good one', () => {
+    let testPlayer = new Player();
+    let testMeds = new ExpiredMedicine(true, false);
+
+    expect(testPlayer.health).toBe(4);
+    testMeds.use(testPlayer);
+    expect(testPlayer.health).toBe(3);
 });
