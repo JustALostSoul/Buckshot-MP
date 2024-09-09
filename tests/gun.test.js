@@ -1,5 +1,5 @@
-const Gun = require("./gun");
-const Player = require("./player");
+const Gun = require("../classes/gun");
+const Player = require("../classes/player");
 
 test('Tests if Gun is loaded on creation with default random values', () => {
     let testGun = new Gun();
