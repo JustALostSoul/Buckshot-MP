@@ -2,7 +2,7 @@ const Magazine = require("./magazine");
 
 class Gun {
     constructor(maxSize = 8, maxLiveRounds = 7, exactValues = false){
-        if(exactValues = true) {
+        if(exactValues) {
             this.currentMagazine = new Magazine(maxSize, maxLiveRounds);
         } else {
             let size = this.getRandomIntInclusive(1, maxSize);
@@ -23,6 +23,7 @@ class Gun {
         if(shell.live){
             target.damage(this.damage);
         }
+        this.resetEffects();
     }
 
     resetEffects(){

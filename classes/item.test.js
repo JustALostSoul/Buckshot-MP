@@ -9,9 +9,11 @@ test('Tests if the Hand Saw causes double damage', () => {
     let testHandSaw = new HandSaw();
 
     testHandSaw.use(testGun);
-    testGun.shoot(testPlayer);
 
     expect(testGun.damage).toBe(2);
+
+    testGun.shoot(testPlayer);
+
     expect(testPlayer.health).toBe(2);
 });
 
