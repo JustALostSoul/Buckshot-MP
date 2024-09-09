@@ -9,6 +9,7 @@ class Gun {
             let liveRounds = this.getRandomIntInclusive(1, maxLiveRounds);
             this.currentMagazine = new Magazine(maxSize, maxLiveRounds);
         }
+        this.damage = 1;
     }
 
     getRandomIntInclusive(min, max) {
@@ -20,8 +21,12 @@ class Gun {
     shoot(target){
         let shell = this.currentMagazine.Shells.shift();
         if(shell.live){
-            target.damage(1);
+            target.damage(this.damage);
         }
+    }
+
+    resetEffects(){
+        this.damage = 1;
     }
 }
 
