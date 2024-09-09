@@ -15,7 +15,7 @@ test('Tests if Gun is loaded on creation with default random values', () => {
     expect(testGun.currentMagazine.Shells.length).toBeGreaterThan(0);
     expect(testGun.currentMagazine.Shells.length).toBeLessThanOrEqual(8);
     expect(count).toBeLessThanOrEqual(7);
-}, 10000);
+});
 
 
 test('Tests if Gun is loaded on creation with custom random values', () => {
@@ -32,7 +32,7 @@ test('Tests if Gun is loaded on creation with custom random values', () => {
     expect(testGun.currentMagazine.Shells.length).toBeGreaterThan(0);
     expect(testGun.currentMagazine.Shells.length).toBeLessThanOrEqual(20);
     expect(count).toBeLessThanOrEqual(10);
-}, 10000);
+});
 
 
 test('Tests if the Gun can shoot at and harm a player', () => {
