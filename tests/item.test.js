@@ -1,7 +1,7 @@
-const Gun = require("./gun");
-const HandSaw = require("./items/handSaw");
-const Player = require("./player");
-const Beer = require("./items/beer");
+const Gun = require("../classes/gun");
+const HandSaw = require("../classes/items/handSaw");
+const Player = require("../classes/player");
+const Beer = require("../classes/items/beer");
 
 test('Tests if the Hand Saw causes double damage', () => {
     let testGun = new Gun(1,1,true);

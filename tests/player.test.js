@@ -1,4 +1,4 @@
-const Player = require("./player");
+const Player = require("../classes/player");
 
 test('Tests, if Player is created with Default Values', () =>  {
     let testPlayer = new Player();

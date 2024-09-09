@@ -1,4 +1,4 @@
-const Magazine = require('./magazine');
+const Magazine = require('../classes/magazine');
 
 test('Creates a Magazine of 5 Shells with 1 live Rounds', () => {
     const size = 5;
