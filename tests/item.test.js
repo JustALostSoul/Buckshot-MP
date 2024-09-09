@@ -5,6 +5,7 @@ const Beer = require("../classes/items/beer");
 const CigarettePack = require("../classes/items/cigarette");
 const ExpiredMedicine = require("../classes/items/medicine");
 const MagnifyingGlass = require("../classes/items/mglass");
+const Handcuffs = require("../classes/items/handcuffs");
 
 test('Tests if the Hand Saw causes double damage', () => {
     let testGun = new Gun(1,1,true);
@@ -73,3 +74,11 @@ test('Test if Magnifying Glass detects live round', () => {
     let result = testGlass.use(testGun);
     expect(result).toBe(true);
 });
+
+test('Test, if handcuffs apply the depuff', () => {
+    let testPlayer = new Player();
+    let testCuffs = new Handcuffs();
+
+    testCuffs.use(testPlayer);
+    expect(testPlayer.nextPlayer).toBe(true);
+})
