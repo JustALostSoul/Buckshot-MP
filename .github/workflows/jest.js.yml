@@ -6,8 +6,6 @@ name: Jest Logic Test + Update Coverage
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
