@@ -1,6 +1,6 @@
 # Buckshot-MP
 
-[![Node.js CI](https://github.com/JustALostSoul/Buckshot-MP/actions/workflows/node.js.yml/badge.svg)](https://github.com/JustALostSoul/Buckshot-MP/actions/workflows/node.js.yml)
+[![Jest Logic Test](https://github.com/JustALostSoul/Buckshot-MP/actions/workflows/jest.js.yml/badge.svg)](https://github.com/JustALostSoul/Buckshot-MP/actions/workflows/jest.js.yml)
 
 Multiplayer-Web-Game based on Buckshot Roulette
 
