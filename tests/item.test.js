@@ -88,7 +88,7 @@ test('Test, if Shell is correctly inverted', () => {
     let testGun = new Gun(1,1,true);
     let testVert = new Inverter();
 
-    expect(testGun.currentMagazine.Shells[0].live).toBe(true);
+    expect(testGun.getNextShell.live).toBe(true);
     testVert.use(testGun);
-    expect(testGun.currentMagazine.Shells[0].live).toBe(false);
+    expect(testGun.getNextShell.live).toBe(false);
 });
