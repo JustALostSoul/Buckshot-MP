@@ -92,7 +92,7 @@ test('Test, if Shell is correctly inverted', () => {
 
     expect(testGun.getNextShell().live).toBe(true);
     testVert.use(testGun);
-    expect(testGun.getNextShell().live).toBe(true);
+    expect(testGun.getNextShell().live).toBe(false);
 });
 
 test('Tests if burner phone detects correct shell.', () => {
