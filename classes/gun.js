@@ -29,6 +29,10 @@ class Gun {
     resetEffects(){
         this.damage = 1;
     }
+
+    getNextShell(){
+        return this.currentMagazine.Shells[0];
+    }
 }
 
 module.exports = Gun;

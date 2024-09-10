@@ -6,6 +6,7 @@ const CigarettePack = require("../classes/items/cigarette");
 const ExpiredMedicine = require("../classes/items/medicine");
 const MagnifyingGlass = require("../classes/items/mglass");
 const Handcuffs = require("../classes/items/handcuffs");
+const Inverter = require("../classes/items/inverter");
 const BurnerPhone = require("../classes/items/burner");
 
 test('Tests if the Hand Saw causes double damage', () => {
@@ -82,6 +83,16 @@ test('Test, if handcuffs apply the depuff', () => {
 
     testCuffs.use(testPlayer);
     expect(testPlayer.nextPlayer).toBe(true);
+});
+
+test('Test, if Shell is correctly inverted', () => {
+    let testGun = new Gun(1,1,true);
+    let testVert = new Inverter();
+
+    expect(testGun.getNextShell().live).toBe(true);
+    testVert.use(testGun);
+    expect(testGun.getNextShell().live).toBe(false);
+});
 });
 
 test('Tests if burner phone detects correct shell.', () => {
