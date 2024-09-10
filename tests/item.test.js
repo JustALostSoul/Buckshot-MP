@@ -93,7 +93,6 @@ test('Test, if Shell is correctly inverted', () => {
     testVert.use(testGun);
     expect(testGun.getNextShell().live).toBe(false);
 });
-});
 
 test('Tests if burner phone detects correct shell.', () => {
     let testGun = new Gun(1,1,true);
