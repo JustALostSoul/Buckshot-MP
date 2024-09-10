@@ -8,6 +8,7 @@ const MagnifyingGlass = require("../classes/items/mglass");
 const Handcuffs = require("../classes/items/handcuffs");
 const Inverter = require("../classes/items/inverter");
 const BurnerPhone = require("../classes/items/burner");
+const Adrenalin = require("../classes/items/adrenalin");
 
 test('Tests if the Hand Saw causes double damage', () => {
     let testGun = new Gun(1,1,true);
@@ -105,4 +106,16 @@ test('Tests if burner phone detects correct shell.', () => {
     let testGun2 = new Gun();
     let result2 = testBurner.use(testGun2);
     expect(result2.live).toBe(testGun2.currentMagazine.Shells[result2.shellNr].live);
+});
+
+test('Tests if Adrenalin can Transfer Items', () => {
+    let testPlayer1 = new Player();
+    let testPlayer2 = new Player();
+    let testAdrenalin = new Adrenalin();
+
+    testPlayer1.addItem(testAdrenalin);
+    expect(testPlayer1.itemInventory[0]).toBe(testAdrenalin);
+
+    testAdrenalin.use(testPlayer1, testPlayer2, testAdrenalin);
+    expect(testPlayer2.itemInventory[0]).toBe(testAdrenalin);
 });
