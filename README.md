@@ -12,4 +12,4 @@ This is the current plan of classes needed. It will change during developement t
 
 The current plan for server connection is to use a peer-to-peer connection to save server resources. One player functions as a host and does all the calculations, so no other players can easily try to cheat by messing with the logic. 
 
-[def]: https://github.com/JustALostSoul/Buckshot-MP/blob/setup/resources/uml/basicUMLv1.png?raw=true
+[def]: https://github.com/JustALostSoul/Buckshot-MP/blob/main/resources/uml/basicUMLv1.png?raw=true
