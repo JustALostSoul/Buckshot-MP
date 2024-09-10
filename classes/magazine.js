@@ -8,6 +8,10 @@ class Magazine{
               
     }
 
+    getLength(){
+        return this.Shells.length;
+    }
+
     getRandomShells(size, liveRounds){
         const liveRoundList = [];
         for(let i = 0; i < liveRounds; i++){

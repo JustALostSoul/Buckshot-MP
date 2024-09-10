@@ -7,6 +7,7 @@ const ExpiredMedicine = require("../classes/items/medicine");
 const MagnifyingGlass = require("../classes/items/mglass");
 const Handcuffs = require("../classes/items/handcuffs");
 const Inverter = require("../classes/items/inverter");
+const BurnerPhone = require("../classes/items/burner");
 
 test('Tests if the Hand Saw causes double damage', () => {
     let testGun = new Gun(1,1,true);
@@ -91,4 +92,17 @@ test('Test, if Shell is correctly inverted', () => {
     expect(testGun.getNextShell().live).toBe(true);
     testVert.use(testGun);
     expect(testGun.getNextShell().live).toBe(false);
+});
+
+test('Tests if burner phone detects correct shell.', () => {
+    let testGun = new Gun(1,1,true);
+    let testBurner = new BurnerPhone();
+
+    let result = testBurner.use(testGun);
+    expect(result.shellNr).toBe(0);
+    expect(result.live).toBe(true);
+
+    let testGun2 = new Gun();
+    let result2 = testBurner.use(testGun2);
+    expect(result2.live).toBe(testGun2.currentMagazine.Shells[result2.shellNr].live);
 });
