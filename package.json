@@ -4,13 +4,14 @@
   "description": "Multiplayer-Web-Game based on Buckshot Roulette",
   "main": "index.js",
   "scripts": {
-    "test": "jest --clearCache && jest --detectOpenHandles --forceExit --collectCoverage --collectCoverageFrom=classes/**/*.{js,jsx}",
+    "test": "jest --clearCache && jest --detectOpenHandles --forceExit --collectCoverage --collectCoverageFrom=classes/**/*.{js,jsx} --reporters=jest-junit",
     "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0"
   }
 }
