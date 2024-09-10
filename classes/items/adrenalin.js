@@ -5,7 +5,7 @@ class Adrenalin extends Item{
     description = 'Steals an Item from another player to instanly use.';
 
     use(fromPlayer, toPlayer, item){
-        fromPlayer.removeItem(item);
+        fromPlayer.removemItem(item);
         toPlayer.addItem(item);
     }
 }
