@@ -1,53 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="21" failures="0" errors="0" time="1.105">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2024-09-10T20:01:20" time="0.865" tests="11">
-    <testcase classname=" Tests if the Hand Saw causes double damage" name=" Tests if the Hand Saw causes double damage" time="0.004">
+<testsuites name="jest tests" tests="22" failures="1" errors="0" time="1.301">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2024-09-11T19:40:21" time="1.027" tests="11">
+    <testcase classname=" Tests if the Hand Saw causes double damage" name=" Tests if the Hand Saw causes double damage" time="0.003">
     </testcase>
-    <testcase classname=" Tests if the Beer unloads one Shell from Gun" name=" Tests if the Beer unloads one Shell from Gun" time="0">
+    <testcase classname=" Tests if the Beer unloads one Shell from Gun" name=" Tests if the Beer unloads one Shell from Gun" time="0.001">
     </testcase>
-    <testcase classname=" Tests if the Cigarette Pack heals properly" name=" Tests if the Cigarette Pack heals properly" time="0">
+    <testcase classname=" Tests if the Cigarette Pack heals properly" name=" Tests if the Cigarette Pack heals properly" time="0.001">
     </testcase>
     <testcase classname=" Tests, if Medicine adds/subtracts health properly on random value" name=" Tests, if Medicine adds/subtracts health properly on random value" time="0.001">
     </testcase>
     <testcase classname=" Tests, if Medicine adds health on fixed good one" name=" Tests, if Medicine adds health on fixed good one" time="0.002">
     </testcase>
-    <testcase classname=" Tests, if Medicine adds health on fixed good one" name=" Tests, if Medicine adds health on fixed good one" time="0.004">
+    <testcase classname=" Tests, if Medicine adds health on fixed good one" name=" Tests, if Medicine adds health on fixed good one" time="0.001">
     </testcase>
-    <testcase classname=" Test if Magnifying Glass detects live round" name=" Test if Magnifying Glass detects live round" time="0.001">
+    <testcase classname=" Test if Magnifying Glass detects live round" name=" Test if Magnifying Glass detects live round" time="0.002">
     </testcase>
     <testcase classname=" Test, if handcuffs apply the depuff" name=" Test, if handcuffs apply the depuff" time="0.001">
     </testcase>
     <testcase classname=" Test, if Shell is correctly inverted" name=" Test, if Shell is correctly inverted" time="0.001">
     </testcase>
-    <testcase classname=" Tests if burner phone detects correct shell." name=" Tests if burner phone detects correct shell." time="0.001">
+    <testcase classname=" Tests if burner phone detects correct shell." name=" Tests if burner phone detects correct shell." time="0.002">
     </testcase>
-    <testcase classname=" Tests if Adrenalin can Transfer Items" name=" Tests if Adrenalin can Transfer Items" time="0.001">
+    <testcase classname=" Tests if Adrenalin can Transfer Items" name=" Tests if Adrenalin can Transfer Items" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2024-09-10T20:01:21" time="0.069" tests="4">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2024-09-11T19:40:22" time="0.066" tests="4">
     <testcase classname=" Creates a Magazine of 5 Shells with 1 live Rounds" name=" Creates a Magazine of 5 Shells with 1 live Rounds" time="0.001">
     </testcase>
     <testcase classname=" Creates a Magazine of 3 Shells with 3 live Rounds" name=" Creates a Magazine of 3 Shells with 3 live Rounds" time="0.001">
     </testcase>
     <testcase classname=" Creates a Magazine of 10 Shells with 5 live Rounds" name=" Creates a Magazine of 10 Shells with 5 live Rounds" time="0.001">
     </testcase>
-    <testcase classname=" Creates a Magazine of 15 Shells with 0 live Rounds" name=" Creates a Magazine of 15 Shells with 0 live Rounds" time="0.004">
+    <testcase classname=" Creates a Magazine of 15 Shells with 0 live Rounds" name=" Creates a Magazine of 15 Shells with 0 live Rounds" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2024-09-10T20:01:21" time="0.056" tests="3">
-    <testcase classname=" Tests if Gun is loaded on creation with default random values" name=" Tests if Gun is loaded on creation with default random values" time="0.001">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2024-09-11T19:40:22" time="0.054" tests="3">
+    <testcase classname=" Tests if Gun is loaded on creation with default random values" name=" Tests if Gun is loaded on creation with default random values" time="0.002">
     </testcase>
     <testcase classname=" Tests if Gun is loaded on creation with custom random values" name=" Tests if Gun is loaded on creation with custom random values" time="0.001">
     </testcase>
-    <testcase classname=" Tests if the Gun can shoot at and harm a player" name=" Tests if the Gun can shoot at and harm a player" time="0.004">
+    <testcase classname=" Tests if the Gun can shoot at and harm a player" name=" Tests if the Gun can shoot at and harm a player" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2024-09-10T20:01:21" time="0.058" tests="3">
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2024-09-11T19:40:22" time="0.089" tests="4">
     <testcase classname=" Tests, if Player is created with Default Values" name=" Tests, if Player is created with Default Values" time="0.002">
     </testcase>
-    <testcase classname=" Tests, if Player is created with Custom Values" name=" Tests, if Player is created with Custom Values" time="0">
+    <testcase classname=" Tests, if Player is created with Custom Values" name=" Tests, if Player is created with Custom Values" time="0.002">
     </testcase>
-    <testcase classname=" Tests, if Player can take damage" name=" Tests, if Player can take damage" time="0.003">
+    <testcase classname=" Tests, if Player can take damage" name=" Tests, if Player can take damage" time="0.001">
+    </testcase>
+    <testcase classname=" Tests if Player can can get an Item Added and removed from Inventory" name=" Tests if Player can can get an Item Added and removed from Inventory" time="0.001">
+      <failure>TypeError: testPlayer.itemInventory is not a function
+    at Object.itemInventory (/workspaces/Buckshot-MP/tests/player.test.js:26:23)
+    at Promise.then.completed (/workspaces/Buckshot-MP/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/workspaces/Buckshot-MP/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/workspaces/Buckshot-MP/node_modules/jest-circus/build/run.js:316:40)
+    at _runTest (/workspaces/Buckshot-MP/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/workspaces/Buckshot-MP/node_modules/jest-circus/build/run.js:126:9)
+    at run (/workspaces/Buckshot-MP/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/workspaces/Buckshot-MP/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/workspaces/Buckshot-MP/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/workspaces/Buckshot-MP/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/workspaces/Buckshot-MP/node_modules/jest-runner/build/runTest.js:444:34)</failure>
     </testcase>
   </testsuite>
 </testsuites>
