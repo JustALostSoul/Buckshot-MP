@@ -4,7 +4,8 @@
   "description": "Multiplayer-Web-Game based on Buckshot Roulette",
   "main": "index.js",
   "scripts": {
-    "test": "jest --clearCache && jest --detectOpenHandles --forceExit --collectCoverage --collectCoverageFrom=classes/**/*.{js,jsx} --reporters=jest-junit",
+    "testUpload": "jest --clearCache && jest --detectOpenHandles --forceExit --collectCoverage --collectCoverageFrom=classes/**/*.{js,jsx} --reporters=jest-junit",
+    "test": "jest --clearCache && jest --detectOpenHandles --forceExit --collectCoverage",
     "start": "node index.js"
   },
   "keywords": [],
