@@ -23,9 +23,9 @@ test('Tests if Player can can get an Item Added and removed from Inventory', () 
     let testPlayer = new Player();
     let testCig = new CigarettePack();
 
-    expect(testPlayer.itemInventory()).toHaveLenght(0);
+    expect(testPlayer.itemInventory).toHaveLenght(0);
     testPlayer.addItem(testCig);
-    expect(testPlayer.itemInventory()).toContain(testCig);
+    expect(testPlayer.itemInventory).toContain(testCig);
     testPlayer.removeItem(testCig);
-    expect(testPlayer.itemInventory()).toHaveLenght(0);
+    expect(testPlayer.itemInventory).toHaveLenght(0);
 });
